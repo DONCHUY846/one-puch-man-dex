@@ -3,7 +3,7 @@
 'use client';
 
 import { useState, useEffect, use } from 'react';
-
+import { CharacterCardFactory } from './factories/character_card_factory';
 export default function Home() {
 
   // Starts the controller of the component with useState
@@ -56,12 +56,13 @@ export default function Home() {
     <main>
       <h1>One Punch Man Characters</h1>
       <div style={{display: 'flex', flexWrap: 'wrap', gap: '16px'}}>
-       {characters.map(char => (
-          <div key={char.id} style={{ border: '1px solid #ccc', padding: '16px' }}>
-            <h2>{char.name}</h2> 
-            <p>{char.class}</p>
-          </div>
-        ))}
+       { /*   Use the factory method to create card 
+        for each character based on its class
+       */}
+        {characters.map(character => 
+            CharacterCardFactory.createCard(character)
+          )}
+
       </div>
     </main>
   );

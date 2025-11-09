@@ -1,12 +1,12 @@
 
-
 const cardStyle = {
 
-    border: '2px solid #007bff', // Borde azul para héroes
+    border: '4px solid #ff0000ff', // Borde azul para héroes
   borderRadius: '8px',
   padding: '16px',
   margin: '8px',
   width: '200px',
+  color: '#000',
   backgroundColor: '#f0f8ff',
 
 };
@@ -21,3 +21,5 @@ const SClass = ({ character}) => {
     )
 
 }
+
+export default SClass;

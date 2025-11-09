@@ -1,9 +1,10 @@
 const cardStyle = {
-  border: '2px solid #dc3545', // Borde rojo para villanos
+  border: '4px solid #ee00bfff', // Borde rojo para villanos
   borderRadius: '8px',
   padding: '16px',
   margin: '8px',
   width: '200px',
+  color: '#000',
   backgroundColor: '#fff0f0',
 };
 
