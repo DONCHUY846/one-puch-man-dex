@@ -60,9 +60,10 @@ export default function Home() {
         for each character based on its class
        */}
         {characters.map(character => 
-            CharacterCardFactory.createCard(character)
+            <div key={character.id} >{CharacterCardFactory.createCard(character)}</div>
+            
           )}
-
+        
       </div>
     </main>
   );

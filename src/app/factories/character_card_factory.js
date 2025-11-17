@@ -1,5 +1,9 @@
 import AClass from "../components/a_class";
 import SClass from "../components/s_class";
+import ShinyBorderDecorator from "../components/decorators/shy_border_decorator";
+import { Caramel } from "next/font/google";
+
+
 
 const UnknownCard = ({ character }) => (
   <div style={{ border: '2px dashed #ccc', padding: '16px', margin: '8px' }}>
@@ -9,16 +13,29 @@ const UnknownCard = ({ character }) => (
 
 // OUR Factory Method
 function createCard(character) {
+  let cardComponent;
 
   switch (character.class) {
     case 'A':
      
-      return <AClass key={character.id} character={character} />;
+      cardComponent =  <AClass key={character.id} character={character} />;
+      break;
     case 'S':
-      return <SClass key={character.id} character={character} />;
+      cardComponent =  <SClass key={character.id} character={character} />;
+      break;
     default:
-      return <UnknownCard key={character.id} character={character} />;
+      cardComponent =  <UnknownCard key={character.id} character={character} />;
+      break;
   }
+
+  if (character.class === 'A') {
+    return (
+        <ShinyBorderDecorator>
+          {cardComponent}
+        </ShinyBorderDecorator>
+      );
+  }
+  return cardComponent;
 }
 
 export const CharacterCardFactory = {
