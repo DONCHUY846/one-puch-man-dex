@@ -1,5 +1,5 @@
 import { IconFactory } from "../factories/icon_factory";
-
+import IconoDeCorazon from "./heart_icon";
 const cardStyle = {
 
     border: '4px solid #ff0000ff', // Borde azul para héroes
@@ -16,6 +16,7 @@ const SClass = ({ character}) => {
     return (
         <div style={cardStyle}>
       <h4>{character.name} Clase S</h4>
+      <IconoDeCorazon character={character} />
       <p>Rank: {character.rank}</p>
       <p>Gender :{IconFactory.getIcon(character.gender)} </p>
     </div>

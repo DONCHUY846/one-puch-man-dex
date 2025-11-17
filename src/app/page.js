@@ -4,6 +4,8 @@
 
 import { useState, useEffect, use } from 'react';
 import { CharacterCardFactory } from './factories/character_card_factory';
+import favorires_counter from "./components/favorites_counter";
+
 export default function Home() {
 
   // Starts the controller of the component with useState
