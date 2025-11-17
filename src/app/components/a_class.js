@@ -1,3 +1,5 @@
+import { IconFactory } from "../factories/icon_factory";
+
 const cardStyle = {
   border: '4px solid #ee00bfff', // Borde rojo para villanos
   borderRadius: '8px',
@@ -14,7 +16,7 @@ const AClass = ({ character }) => {
       <h4>{character.name} Clase A</h4>
       <p>Rank: {character.rank}</p>
       
-      
+      <p>Gender :{IconFactory.getIcon(character.gender)} </p>
     </div>
   );
 };

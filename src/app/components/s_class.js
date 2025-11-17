@@ -1,3 +1,4 @@
+import { IconFactory } from "../factories/icon_factory";
 
 const cardStyle = {
 
@@ -16,7 +17,7 @@ const SClass = ({ character}) => {
         <div style={cardStyle}>
       <h4>{character.name} Clase S</h4>
       <p>Rank: {character.rank}</p>
-      
+      <p>Gender :{IconFactory.getIcon(character.gender)} </p>
     </div>
     )
 
